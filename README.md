@@ -1,82 +1,82 @@
 # Image-text-Data-extraction-using-Paddle-OCR-Tesserract-and-BERT
-Below is an example `README.md` file for your GitHub repository:
 
 ```markdown
-# Image Text Extraction using Tesseract and BERT
+# Image Text Data Extraction using Paddle OCR, Tesseract, and BERT
 
-This repository contains a Jupyter Notebook demonstrating how to extract text from images using [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) and then process the extracted text using a pre-trained [BERT](https://github.com/google-research/bert) model with the help of the [Hugging Face Transformers](https://github.com/huggingface/transformers) library.
+This repository contains a Jupyter Notebook demonstrating how to extract text from images using [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR), [Tesseract OCR](https://github.com/tesseract-ocr/tesseract), and then process the extracted text using a pre-trained [BERT](https://github.com/google-research/bert) model via the [Hugging Face Transformers](https://github.com/huggingface/transformers) library.
 
-## Contents
+## 📂 Dataset
 
-- `Image_Text_Extraction.ipynb`: The main notebook with code for text extraction and processing.
+The dataset used for this project is available on Google Drive:
+
+🔗 **[Download Dataset](https://drive.google.com/drive/folders/1O8FcLbhiE19YOLIwZ5yPVpKobCh6P-yY?usp=drive_link)**
+
+Once downloaded, extract and place the dataset in your preferred location. Then update the notebook's `DATASET_FOLDER` variable to point to that location.
+
+## 📜 Contents
+
+- `Image_Text_Extraction.ipynb`: The main notebook for text extraction and processing.
 - `README.md`: This file.
 
-## Prerequisites
+## 🚀 Prerequisites
 
 - **Python 3.x**
 - **Jupyter Notebook** or **Jupyter Lab**
 
-### System Requirements for Tesseract
-- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) must be installed on your system.
-  - On Ubuntu, you can install it using:
+### System Requirements for OCR Tools
+- **PaddleOCR**: Follow the [installation guide](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.6/doc/doc_en/installation_en.md) for setup.
+- **Tesseract OCR**: 
+  - On Ubuntu:
     ```bash
     sudo apt-get install tesseract-ocr
     ```
   - On Windows, download and install from the [Tesseract OCR project](https://github.com/tesseract-ocr/tesseract/wiki).
 
-## Setup
+## 🛠️ Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YourUsername/Image-Text-Extraction.git
-cd Image-Text-Extraction
+git clone https://github.com/KARTHIK-M116/Image-text-Data-extraction-using-Paddle-OCR-Tesserract-and-BERT.git
+cd Image-text-Data-extraction-using-Paddle-OCR-Tesserract-and-BERT
 ```
 
 ### 2. (Optional) Create and Activate a Virtual Environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # For Windows: venv\Scripts\activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-### 3. Install the Required Python Packages
+### 3. Install Required Packages
 
-You can install the dependencies using `pip`:
+Install the necessary Python packages:
 
 ```bash
 pip install pandas pillow pytesseract transformers torch
 ```
 
-Alternatively, if you create a `requirements.txt` file, install via:
+For PaddleOCR, follow its [installation instructions](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.6/doc/doc_en/installation_en.md).
 
-```bash
-pip install -r requirements.txt
-```
+## 🎯 Usage
 
-## Usage
-
-1. Launch Jupyter Notebook:
+1. **Launch Jupyter Notebook:**
 
     ```bash
     jupyter notebook
     ```
 
-2. Open the `Image_Text_Extraction.ipynb` notebook.
+2. **Open the `Image_Text_Extraction.ipynb` Notebook.**
 
-3. Update the `DATASET_FOLDER` path and any sample image paths in the notebook to match your local environment.
+3. **Update the Dataset Path:**
+   - Modify the `DATASET_FOLDER` variable in the notebook to the location where you extracted the dataset.
 
-4. Run the notebook cells to perform image text extraction and process the text with BERT.
+4. **Run the Notebook Cells:**
+   - The notebook demonstrates image text extraction using both Tesseract (and optionally PaddleOCR) and processes the text with BERT.
 
-## Customization
+## 🔧 Customization
 
-- **Dataset Paths:** Modify the `DATASET_FOLDER` variable in the notebook to point to your local dataset.
-- **Sample Image:** Change the sample image file path if necessary.
-- **BERT Model:** If desired, replace the pre-trained BERT model with another model by modifying the `process_text_with_bert` function.
+- **Dataset Paths:** Adjust the `DATASET_FOLDER` variable to match your local dataset location.
+- **OCR Options:** Choose between PaddleOCR or Tesseract by commenting/uncommenting the appropriate sections in the notebook.
+- **BERT Model:** You can switch to a different pre-trained BERT model by modifying the `process_text_with_bert` function.
 
-## Acknowledgments
-
-- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract)
-- [Hugging Face Transformers](https://github.com/huggingface/transformers)
-- [BERT](https://github.com/google-research/bert)
-```
